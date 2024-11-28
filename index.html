@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To My Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <center><h2>WELCOME TO MY DYNAMIC RESUME BUILDER</h2></center>
+            <center><h3>I HOPE YOU LIKE IT</h3></center>
+
+            <h3>PERSONAL INFORMATION</h3>
+            <label>Enter Name:</label>
+            <input type="text" id="name" placeholder="Enter Your Name">
+            <label>Enter Your Father Name:</label>
+            <input type="text" id="father-name" placeholder="Enter Father Name">
+            <label>Enter Your Date of Birth:</label>
+            <input type="date" id="dob">
+            <label>Enter Your CNIC No:</label>
+            <input type="text" id="cnic" placeholder="CNIC No">
+            <label>Enter Your Domicile:</label>
+            <input type="text" id="domicile" placeholder="Domicile">
+            <label>Enter Your Marital Status:</label>
+            <input type="text" id="marital-status" placeholder="Single or Married">
+            <label>Enter Your Religion:</label>
+            <input type="text" id="religion" placeholder="Religion">
+            <label>Enter Nationality:</label>
+            <input type="text" id="nationality" placeholder="Nationality">
+            <label>Upload Your Photo:</label>
+            <input type="file" id="photo">
+            <label>About Me:</label>
+            <textarea id="about-me" placeholder="About yourself"></textarea>
+            <label>Enter Your Email:</label>
+            <input type="email" id="email" placeholder="Enter email">
+            <label>Enter Your Phone No:</label>
+            <input type="text" id="phone" placeholder="Phone No">
+            <label>Enter Your Address:</label>
+            <input type="text" id="address" placeholder="Address">
+            <label>Enter Your Languages:</label>
+            <input type="text" id="languages" placeholder="Languages Known">
+
+            <h2>OBJECTIVE</h2>
+            <textarea id="objective" placeholder="Enter Your Objective"></textarea>
+
+            <h2>EDUCATION</h2>
+            <textarea id="education" placeholder="Enter Your Education"></textarea>
+
+            <h2>EXPERIENCE</h2>
+            <textarea id="experience" placeholder="Enter Your Experience"></textarea>
+
+            <h2>SKILLS</h2>
+            <textarea id="skills" placeholder="Enter Your Skills"></textarea>
+
+            <h2>PROJECTS</h2>
+            <textarea id="projects" placeholder="Enter Your Projects"></textarea>
+
+            <div class="buttons">
+                <button class="generate">GENERATE</button>
+                <button class="share">SHAREABLE LINK</button>
+            </div>
+
+            <div id="resume-output" style="display:none;">
+                <h3>Generated Resume:</h3>
+                <p><strong>Name:</strong> <span id="resume-name"></span></p>
+                <p><strong>Email:</strong> <span id="resume-email"></span></p>
+                <p><strong>Phone:</strong> <span id="resume-phone"></span></p>
+                <p><strong>Address:</strong> <span id="resume-address"></span></p>
+                <p><strong>Objective:</strong> <span id="resume-objective"></span></p>
+                <p><strong>Experience:</strong> <span id="resume-experience"></span></p>
+                <p><strong>Skills:</strong> <span id="resume-skills"></span></p>
+                <p><strong>Education:</strong> <span id="resume-education"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <center><div class="footer">MADE BY MUHAMMAD KHATEEB EJAZ</div></center>
+
+<div class="terms">
+        <center><i class="fas fa-info-circle"></i> By Using Resume Builder You Agree To
+            <a href="#Terms" id="Terms-link">Terms</a> And 
+            <a href="#Privacy" id="Privacy-link">Privacy</a> </center>
+        
+    </div>
+
+    <!-- Terms Modal (Hidden by default) -->
+    <div id="terms" style="display:none; padding:20px; background-color:#fff; color:#333;">
+        <h3>Terms and Conditions</h3>
+        <p>These are the terms and conditions for using the Resume Builder. By using this tool, you agree to follow the terms outlined below:</p>
+        <ul>
+            <li>You may use the Resume Builder for personal and non-commercial purposes.</li>
+            <li>Do not share content that violates copyright, trademarks, or intellectual property.</li>
+            <li>We are not responsible for any errors or damages that result from using this tool.</li>
+        </ul>
+        <p><a href="#" onclick="document.getElementById('terms').style.display='none';">Close</a></p>
+    </div>
+
+    <!-- Privacy Policy Modal (Hidden by default) -->
+    <div id="privacy" style="display:none; padding:20px; background-color:#fff; color:#333;">
+        <h3>Privacy Policy</h3>
+        <p>Your privacy is important to us. This Privacy Policy outlines how we handle your personal information:</p>
+        <ul>
+            <li>We collect personal data such as name, contact info, and photo to generate your resume.</li>
+            <li>Your data will not be shared with third parties unless required by law.</li>
+            <li>We do not store your resume data permanently after it has been generated.</li>
+        </ul>
+        <p><a href="#" onclick="document.getElementById('privacy').style.display='none';">Close</a></p>
+    </div>
+
+    <script>
+        document.getElementById('terms-link').addEventListener('click', function() {
+            document.getElementById('terms').style.display = 'block';
+        });
+
+        document.getElementById('privacy-link').addEventListener('click', function() {
+            document.getElementById('privacy').style.display = 'block';
+        });
+    </script>
+
+
+
+
+    <script>
+        document.querySelector('.generate').addEventListener('click', function () {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const address = document.getElementById('address').value;
+            const objective = document.getElementById('objective').value;
+            const experience = document.getElementById('experience').value;
+            const skills = document.getElementById('skills').value;
+            const education = document.getElementById('education').value;
+
+            document.getElementById('resume-name').textContent = name;
+            document.getElementById('resume-email').textContent = email;
+            document.getElementById('resume-phone').textContent = phone;
+            document.getElementById('resume-address').textContent = address;
+            document.getElementById('resume-objective').textContent = objective;
+            document.getElementById('resume-experience').textContent = experience;
+            document.getElementById('resume-skills').textContent = skills;
+            document.getElementById('resume-education').textContent = education;
+
+            document.getElementById('resume-output').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+   

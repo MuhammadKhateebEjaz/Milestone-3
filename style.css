@@ -1,0 +1,156 @@
+/* General Styles */
+body {
+   font-family: Arial, sans-serif;
+   background-color: #0a1f44;
+   color: #ffffff;
+   margin: 0;
+   padding: 0;
+}
+
+.container {
+   max-width: 1200px;
+   margin: auto;
+   padding: 20px;
+}
+
+header {
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+main {
+   background: #1a1a1a;
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+section {
+   margin-bottom: 20px;
+   background: #1a1a1a;
+   padding: 15px;
+   border-radius: 8px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+label {
+   display: block;
+   margin-bottom: 5px;
+   font-weight: bold;
+}
+
+input, textarea {
+   width: 100%;
+   padding: 10px;
+   margin-bottom: 15px;
+   border: none;
+   border-radius: 4px;
+   background: #2a2a2a;
+   color: #fff;
+}
+
+textarea {
+   resize: vertical;
+}
+
+.buttons {
+   display: flex;
+   justify-content: space-between;
+}
+
+button {
+   padding: 10px 20px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   font-weight: bold;
+}
+
+button#generate-resume {
+   background-color: #007bff;
+   color: white;
+}
+
+button#share-link {
+   background-color: #28a745;
+   color: white;
+}
+
+footer {
+   text-align: center;
+   margin-top: 20px;
+   font-size: 14px;
+}
+
+h2, h3 {
+   color: #00d1b2;
+}
+
+/* Responsive Design */
+
+/* Large Screens (Desktops) */
+@media (min-width: 768px) {
+   .container {
+       display: flex;
+       flex-wrap: wrap;
+   }
+
+   .section {
+       flex: 1 1 calc(50% - 20px);
+       margin: 10px;
+   }
+
+   .buttons {
+       gap: 15px;
+       justify-content: flex-end;
+   }
+}
+
+/* Small Screens (Mobiles) */
+@media (max-width: 768px) {
+   body {
+       font-size: 14px;
+   }
+
+   .container {
+       flex-direction: column;
+   }
+
+   .section {
+       margin: 10px 0;
+   }
+
+   button {
+       width: 100%;
+       margin-top: 10px;
+   }
+
+   .buttons {
+       flex-direction: column;
+       align-items: stretch;
+   }
+}
+
+.terms {
+   margin-top: 10px;
+   text-align: center;
+   font-size: 12px;
+}
+
+.terms i {
+   margin-right: 5px;
+}
+
+.terms a {
+   color: #007bff;
+   text-decoration: none;
+}
+
+.terms a:hover {
+   text-decoration: underline;
+}
+
+
+
+
+
